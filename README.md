@@ -10,5 +10,7 @@ this is the articale I will base my developement on : [﻿advapay.eu/core-bankin
 The core components of the banking mainframe:
 
 - Customer Onboarding: Manage clients - with security and regulations implemented like KYC and AML . account types are 'current' 'investement' 'savings'. all of the previous supporting Real-time .
+
 - Transaction Processing: Card Payments, Internal Transfers , SWIFT, Local
+
 - Card Issuing: Card life-cycle Management
