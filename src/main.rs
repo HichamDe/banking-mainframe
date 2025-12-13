@@ -2,14 +2,21 @@ use axum::{
     routing::get,
     Router,
 };
-use crate::controller::{account, card, transaction, user};
-pub mod controller;
 
+mod utils;
+
+// pub mod controller;
+// mod controller;
 
 #[tokio::main]
 async fn main() {
+
+    // connect to the database
+    utils::establish_connection::connect();
+
     // build our application with a single route
-    let app = Router::new().route("/", get(|| async { "Hello, World!" }));
+    let app = Router::new().route("/", get(|| async { "Hello, World!" }))
+                                    .route("/test",get(|| async {" Welcome to Rust Server "}));
 
     // run our app with hyper, listening globally on port 3000
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();

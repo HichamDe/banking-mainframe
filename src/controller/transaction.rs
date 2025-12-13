@@ -1,4 +1,4 @@
-struct Card {
+struct Transaction {
     id: i8,
     ttype: String,
     // operations:
